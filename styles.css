@@ -30,7 +30,7 @@ a { color: var(--deep); }
 button, a, input, select, summary { transition: background-color .18s, color .18s, border-color .18s, box-shadow .18s; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 [hidden] { display: none !important; }
-.icon { width: 18px; height: 18px; flex: none; vertical-align: middle; }
+.icon { width: 18px; height: 18px; flex: none; vertical-align: middle; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
 i[data-icon] { display: inline-flex; }
 h1, h2, h3 { margin: 0; font: 600 2.25rem/1.04 var(--serif); }
 p { margin: 0 0 1em; }
@@ -369,3 +369,5 @@ dialog::backdrop { background: #32485968; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+@media (min-width: 761px) { #page-checkin .ci-intro h2 { font-size: clamp(2.75rem, 5.2vw, 4.2rem); } }
